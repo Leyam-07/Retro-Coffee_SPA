@@ -1237,3 +1237,1471 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+/* Menu Page Styles */
+.page-menu {
+  padding: 0;
+  max-width: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.page-menu::before {
+  display: none;
+}
+
+/* Menu Hero */
+.menu-hero {
+  background-color: var(--retro-bg-light);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.menu-hero .glitch {
+  font-size: 48px;
+  position: relative;
+  color: var(--retro-yellow);
+  text-shadow: 3px 3px 0 var(--retro-red), -3px -3px 0 var(--retro-blue);
+  animation: glitch 2s infinite;
+}
+
+.menu-hero .glitch::before,
+.menu-hero .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-hero .glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: var(--retro-green);
+  z-index: -1;
+}
+
+.menu-hero .glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: var(--retro-pink);
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    text-shadow: 3px 3px 0 var(--retro-red), -3px -3px 0 var(--retro-blue);
+  }
+  25% {
+    text-shadow: -3px 3px 0 var(--retro-red), 3px -3px 0 var(--retro-blue);
+  }
+  50% {
+    text-shadow: 3px -3px 0 var(--retro-red), -3px 3px 0 var(--retro-blue);
+  }
+}
+
+@keyframes glitch-1 {
+  0%,
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  20% {
+    clip-path: inset(10% 0 60% 0);
+    transform: translate(-3px, 2px);
+  }
+  40% {
+    clip-path: inset(40% 0 20% 0);
+    transform: translate(3px, -2px);
+  }
+  60% {
+    clip-path: inset(80% 0 10% 0);
+    transform: translate(-2px, 3px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%,
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0);
+  }
+  30% {
+    clip-path: inset(70% 0 20% 0);
+    transform: translate(2px, -3px);
+  }
+  50% {
+    clip-path: inset(20% 0 70% 0);
+    transform: translate(-2px, 3px);
+  }
+  70% {
+    clip-path: inset(10% 0 80% 0);
+    transform: translate(3px, -2px);
+  }
+}
+
+.menu-hero .subtitle {
+  font-size: 24px;
+  color: var(--retro-white);
+  margin-top: 1rem;
+}
+
+/* Category Tabs */
+.menu-categories {
+  padding: 2rem 0;
+  background-color: var(--retro-bg);
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  padding: 1rem 2rem;
+  background-color: var(--retro-bg-light);
+  color: var(--retro-white);
+  border: 3px solid var(--retro-white);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.category-tab:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+}
+
+.category-tab:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.category-tab.active {
+  background-color: var(--retro-yellow);
+  color: var(--retro-black);
+  border-color: var(--retro-yellow);
+  box-shadow: 0 4px 0 #ccae31, 0 8px 0 rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.category-icon {
+  font-size: 20px;
+}
+
+.category-name {
+  font-size: 12px;
+}
+
+/* Menu Items */
+.menu-items {
+  padding: 3rem 0;
+  background-color: var(--retro-bg);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item-wrapper {
+  transition: transform 0.1s;
+}
+
+.menu-item-wrapper:hover {
+  transform: translateY(-4px);
+}
+
+.menu-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.menu-item-icon {
+  font-size: 24px;
+}
+
+.menu-item-name {
+  flex: 1;
+  font-size: 16px;
+}
+
+.popular-badge {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: var(--retro-red);
+  color: var(--retro-white);
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+  padding: 4px 8px;
+  border: 2px solid var(--retro-white);
+  animation: pulseBadge 1s infinite;
+}
+
+@keyframes pulseBadge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.menu-item-content {
+  padding: 0.5rem 0;
+}
+
+.menu-item-description {
+  font-size: 18px;
+  color: var(--retro-white);
+  margin-bottom: 1.5rem;
+  min-height: 48px;
+}
+
+.menu-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item-price {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: var(--retro-green);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Small button style for menu items */
+.btn-sm {
+  font-size: 10px !important;
+  padding: 8px 16px !important;
+}
+
+/* Special Offers Section */
+.menu-specials {
+  padding: 4rem 0;
+  background-color: var(--retro-bg-light);
+  border-top: 4px solid var(--retro-white);
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.specials-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.specials-content h2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 24px;
+  color: var(--retro-green);
+  text-shadow: 3px 3px 0 var(--retro-blue);
+  margin-bottom: 3rem;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.special-item {
+  background-color: var(--retro-bg);
+  border: 4px solid var(--retro-green);
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.special-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 rgba(107, 207, 127, 0.3);
+}
+
+.special-icon {
+  font-size: 48px;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.special-item:nth-child(1) .special-icon {
+  animation-delay: 0s;
+}
+
+.special-item:nth-child(2) .special-icon {
+  animation-delay: 1s;
+}
+
+.special-item:nth-child(3) .special-icon {
+  animation-delay: 2s;
+}
+
+.special-item h3 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  color: var(--retro-yellow);
+  margin-bottom: 1rem;
+}
+
+.special-item p {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.special-price {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-green);
+}
+
+/* Menu Info Section */
+.menu-info {
+  padding: 2rem 0;
+  background-color: var(--retro-bg);
+}
+
+.info-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-text {
+  font-size: 20px;
+  color: var(--retro-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.info-text .pixel-icon {
+  font-size: 24px;
+}
+
+/* Menu Page Responsive */
+@media (max-width: 768px) {
+  .menu-hero .glitch {
+    font-size: 32px;
+  }
+
+  .menu-hero .subtitle {
+    font-size: 18px;
+  }
+
+  .category-tabs {
+    padding: 0 1rem;
+  }
+
+  .category-tab {
+    font-size: 10px;
+    padding: 0.75rem 1rem;
+  }
+
+  .category-icon {
+    font-size: 16px;
+  }
+
+  .category-name {
+    font-size: 10px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .special-icon {
+    font-size: 36px;
+  }
+
+  .info-text {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+}
+
+/* Shop Page Styles */
+.page-shop {
+  padding: 0;
+  max-width: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.page-shop::before {
+  display: none;
+}
+
+/* Shop Hero */
+.shop-hero {
+  background-color: var(--retro-bg-light);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.shop-hero h1 {
+  font-size: 48px;
+  color: var(--retro-purple);
+  text-shadow: 4px 4px 0 var(--retro-pink);
+}
+
+.shop-hero .subtitle {
+  font-size: 24px;
+  color: var(--retro-white);
+  margin-top: 1rem;
+}
+
+/* Floating Cart Button */
+.floating-cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.cart-button {
+  position: relative;
+  background-color: var(--retro-purple);
+  color: var(--retro-white);
+  border: 4px solid var(--retro-white);
+  padding: 1rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.1s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cart-button:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cart-icon {
+  font-size: 28px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--retro-red);
+  color: var(--retro-white);
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 2px solid var(--retro-white);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  background-color: var(--retro-bg-light);
+  border-left: 4px solid var(--retro-white);
+  z-index: 1001;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 4px solid var(--retro-white);
+  background-color: var(--retro-purple);
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--retro-white);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  color: var(--retro-white);
+  font-size: 24px;
+  cursor: pointer;
+  font-family: "VT323", monospace;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.close-cart:hover {
+  transform: scale(1.2);
+}
+
+.cart-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 24px;
+  color: var(--retro-white);
+  padding: 3rem 0;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-item {
+  background-color: var(--retro-bg);
+  border: 3px solid var(--retro-white);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item-icon {
+  font-size: 32px;
+}
+
+.cart-item-info h4 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: var(--retro-yellow);
+  margin: 0 0 0.5rem 0;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  color: var(--retro-green);
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-btn {
+  background-color: var(--retro-blue);
+  color: var(--retro-white);
+  border: none;
+  width: 24px;
+  height: 24px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+}
+
+.quantity-btn:hover {
+  background-color: var(--retro-yellow);
+  color: var(--retro-black);
+}
+
+.quantity-btn:active {
+  transform: scale(0.9);
+}
+
+.quantity {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-white);
+  min-width: 30px;
+  text-align: center;
+}
+
+.cart-footer {
+  border-top: 4px solid var(--retro-white);
+  padding: 1.5rem;
+  background-color: var(--retro-bg);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+}
+
+.total-price {
+  color: var(--retro-green);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.checkout-btn {
+  width: 100%;
+}
+
+/* Shop Categories */
+.shop-categories {
+  padding: 2rem 0;
+  background-color: var(--retro-bg);
+  border-bottom: 4px solid var(--retro-white);
+}
+
+/* Shop Products */
+.shop-products {
+  padding: 3rem 0;
+  background-color: var(--retro-bg);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card-wrapper {
+  position: relative;
+  transition: transform 0.1s;
+}
+
+.product-card-wrapper:hover {
+  transform: translateY(-4px);
+}
+
+.product-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--retro-red);
+  color: var(--retro-white);
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+  padding: 6px 10px;
+  border: 2px solid var(--retro-white);
+  z-index: 1;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.pixel-product-icon {
+  font-size: 64px;
+  animation: productFloat 3s ease-in-out infinite;
+}
+
+@keyframes productFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.product-info {
+  text-align: center;
+}
+
+.product-name {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  font-size: 18px;
+  color: var(--retro-white);
+  margin-bottom: 1.5rem;
+  min-height: 40px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: var(--retro-green);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.add-to-cart-btn {
+  font-size: 10px !important;
+  padding: 8px 16px !important;
+}
+
+/* Shop Info Section */
+.shop-info {
+  padding: 4rem 0;
+  background-color: var(--retro-bg-light);
+  border-top: 4px solid var(--retro-white);
+}
+
+.shop-info .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.shop-info .info-item {
+  text-align: center;
+}
+
+.shop-info .info-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 1rem;
+  animation: iconBounce 2s ease-in-out infinite;
+}
+
+.shop-info .info-item:nth-child(1) .info-icon {
+  animation-delay: 0s;
+}
+
+.shop-info .info-item:nth-child(2) .info-icon {
+  animation-delay: 0.5s;
+}
+
+.shop-info .info-item:nth-child(3) .info-icon {
+  animation-delay: 1s;
+}
+
+.shop-info .info-item:nth-child(4) .info-icon {
+  animation-delay: 1.5s;
+}
+
+@keyframes iconBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.shop-info h3 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.shop-info p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Shop Page Responsive */
+@media (max-width: 768px) {
+  .shop-hero h1 {
+    font-size: 32px;
+  }
+
+  .shop-hero .subtitle {
+    font-size: 18px;
+  }
+
+  .floating-cart {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .cart-button {
+    padding: 0.75rem;
+    font-size: 20px;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .shop-info .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shop-info .info-icon {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-info .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Rewards Page Styles */
+.page-rewards {
+  padding: 0;
+  max-width: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.page-rewards::before {
+  display: none;
+}
+
+/* Rewards Hero */
+.rewards-hero {
+  background-color: var(--retro-bg-light);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.rewards-hero h1 {
+  font-size: 48px;
+  color: var(--retro-yellow);
+  text-shadow: 4px 4px 0 var(--retro-orange);
+}
+
+.rewards-hero .subtitle {
+  font-size: 24px;
+  color: var(--retro-white);
+  margin-top: 1rem;
+}
+
+/* Player Status */
+.player-status {
+  padding: 3rem 0;
+  background-color: var(--retro-bg);
+}
+
+.status-header h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.status-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.level-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.current-level {
+  flex: 1;
+  min-width: 200px;
+}
+
+.level-label {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: var(--retro-yellow);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.level-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.level-number {
+  font-family: "Press Start 2P", cursive;
+  font-size: 48px;
+  color: var(--retro-green);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.level-name {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: var(--retro-white);
+}
+
+.points-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.points-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
+}
+
+.points-label {
+  font-size: 18px;
+  color: var(--retro-white);
+}
+
+.points-value {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  color: var(--retro-green);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Progress Bar */
+.level-progress {
+  width: 100%;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: var(--retro-yellow);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background-color: var(--retro-black);
+  border: 3px solid var(--retro-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--retro-green) 0%,
+    var(--retro-yellow) 50%,
+    var(--retro-green) 100%
+  );
+  background-size: 200% 100%;
+  animation: progressGradient 2s linear infinite;
+  position: relative;
+  transition: width 0.5s ease-in-out;
+}
+
+@keyframes progressGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.progress-sparkle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--retro-white);
+  animation: sparkle 1s infinite;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.progress-points {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 16px;
+  color: var(--retro-white);
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 4rem 0;
+  background-color: var(--retro-bg-light);
+  border-top: 4px solid var(--retro-white);
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.section-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 28px;
+  color: var(--retro-yellow);
+  text-shadow: 3px 3px 0 var(--retro-red);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-card {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  font-family: "Press Start 2P", cursive;
+  font-size: 48px;
+  color: var(--retro-yellow);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.step-card h3 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: var(--retro-white);
+  margin-bottom: 1rem;
+}
+
+.step-card p {
+  font-size: 20px;
+  color: var(--retro-white);
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 4rem 0;
+  background-color: var(--retro-bg);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background-color: var(--retro-bg-light);
+  border: 4px solid var(--retro-white);
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.achievement-card.unlocked {
+  border-color: var(--retro-green);
+  box-shadow: 0 0 20px rgba(107, 207, 127, 0.5);
+}
+
+.achievement-card:hover {
+  transform: translateY(-4px);
+}
+
+.achievement-icon {
+  font-size: 48px;
+  margin-bottom: 1rem;
+  display: block;
+  animation: achievementFloat 3s ease-in-out infinite;
+}
+
+@keyframes achievementFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.achievement-name {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-description {
+  font-size: 18px;
+  color: var(--retro-white);
+  margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+.achievement-points {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+}
+
+.earned {
+  color: var(--retro-green);
+}
+
+.potential {
+  color: var(--retro-white);
+  opacity: 0.6;
+}
+
+.locked-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-icon {
+  font-size: 36px;
+  opacity: 0.8;
+}
+
+/* Rewards Store */
+.rewards-store {
+  padding: 4rem 0;
+  background-color: var(--retro-bg-light);
+  border-top: 4px solid var(--retro-white);
+  border-bottom: 4px solid var(--retro-white);
+}
+
+.store-subtitle {
+  text-align: center;
+  font-size: 24px;
+  color: var(--retro-white);
+  margin-bottom: 3rem;
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reward-content {
+  text-align: center;
+}
+
+.reward-icon {
+  font-size: 56px;
+  margin-bottom: 1rem;
+  display: block;
+  animation: rewardBounce 2s ease-in-out infinite;
+}
+
+@keyframes rewardBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.reward-name {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  color: var(--retro-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.reward-description {
+  font-size: 18px;
+  color: var(--retro-white);
+  margin-bottom: 1.5rem;
+  min-height: 40px;
+}
+
+.reward-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reward-cost {
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+  color: var(--retro-green);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.redeem-btn {
+  font-size: 10px !important;
+  padding: 8px 16px !important;
+}
+
+/* Level Benefits */
+.level-benefits {
+  padding: 4rem 0;
+  background-color: var(--retro-bg);
+}
+
+.levels-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.level-card {
+  transition: all 0.1s;
+}
+
+.level-card.unlocked .pixel-border {
+  animation: levelGlow 2s ease-in-out infinite;
+}
+
+@keyframes levelGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.level-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.level-header {
+  margin-bottom: 1rem;
+}
+
+.level-num {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: var(--retro-yellow);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.level-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-white);
+  display: block;
+}
+
+.level-requirement {
+  font-size: 16px;
+  color: var(--retro-green);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
+}
+
+.level-perks {
+  font-size: 16px;
+  color: var(--retro-white);
+  text-align: left;
+  line-height: 1.8;
+}
+
+.level-card.locked {
+  opacity: 0.6;
+}
+
+.level-card.locked .level-content {
+  filter: grayscale(100%);
+}
+
+/* Rewards CTA */
+.rewards-cta {
+  padding: 4rem 0;
+  background-color: var(--retro-bg-light);
+  border-top: 4px solid var(--retro-white);
+}
+
+.cta-content {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.cta-content h2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 28px;
+  color: var(--retro-yellow);
+  text-shadow: 3px 3px 0 var(--retro-green);
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 24px;
+  color: var(--retro-white);
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  font-size: 14px !important;
+  padding: 16px 32px !important;
+}
+
+/* Rewards Page Responsive */
+@media (max-width: 768px) {
+  .rewards-hero h1 {
+    font-size: 32px;
+  }
+
+  .rewards-hero .subtitle {
+    font-size: 18px;
+  }
+
+  .level-info {
+    flex-direction: column;
+  }
+
+  .level-number {
+    font-size: 36px;
+  }
+
+  .level-name {
+    font-size: 14px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .rewards-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .levels-showcase {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-card {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .achievement-name {
+    font-size: 12px;
+  }
+
+  .level-perks {
+    font-size: 14px;
+  }
+}
