@@ -2705,3 +2705,429 @@ p {
     font-size: 14px;
   }
 }
+
+/* Enhanced 404 Page Styles */
+.not-found-page {
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--retro-bg);
+  overflow: hidden;
+}
+
+/* Particle Container */
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  background-color: var(--retro-white);
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: particleFall linear infinite;
+}
+
+@keyframes particleFall {
+  from {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Game Over Container */
+.game-over-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Pixel Art Skull */
+.pixel-skull {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.skull-row {
+  display: flex;
+  justify-content: center;
+  height: 15px;
+}
+
+.skull-row span {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+
+.skull-row .filled {
+  background-color: var(--retro-white);
+}
+
+.skull-row .eye {
+  background-color: var(--retro-red);
+  animation: eyeGlow 2s ease-in-out infinite;
+}
+
+.skull-row .teeth {
+  background-color: var(--retro-white);
+  border-top: 2px solid var(--retro-black);
+}
+
+@keyframes eyeGlow {
+  0%,
+  100% {
+    background-color: var(--retro-red);
+    box-shadow: 0 0 10px var(--retro-red);
+  }
+  50% {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+  }
+}
+
+/* Game Over Title */
+.game-over-title {
+  margin: 3rem 0 2rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+.game-text {
+  display: block;
+  font-size: 48px;
+  color: var(--retro-yellow);
+  text-shadow: 4px 4px 0 var(--retro-red);
+  margin-bottom: 1rem;
+  animation: titlePulse 2s ease-in-out infinite;
+}
+
+.over-text {
+  display: block;
+  font-size: 60px;
+  color: var(--retro-red);
+  text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.8);
+  animation: titleShake 0.5s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes titleShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+
+/* Score Display */
+.score-display {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.score-content {
+  padding: 2rem 3rem;
+  text-align: center;
+}
+
+.score-label {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-yellow);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.score-value {
+  font-family: "Press Start 2P", cursive;
+  font-size: 36px;
+  color: var(--retro-white);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Error Message */
+.error-message {
+  margin: 2rem 0;
+}
+
+.error-code {
+  font-family: "Press Start 2P", cursive;
+  font-size: 24px;
+  color: var(--retro-orange);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.blink-text {
+  font-size: 20px;
+  color: var(--retro-white);
+  transition: opacity 0.1s;
+}
+
+.blink-text.hidden {
+  opacity: 0;
+}
+
+/* Retro Terminal */
+.retro-terminal {
+  background-color: var(--retro-black);
+  border: 4px solid var(--retro-green);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 0 20px rgba(107, 207, 127, 0.5);
+  font-family: "VT323", monospace;
+}
+
+.terminal-header {
+  background-color: var(--retro-green);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red {
+  background-color: var(--retro-red);
+}
+
+.terminal-dot.yellow {
+  background-color: var(--retro-yellow);
+}
+
+.terminal-dot.green {
+  background-color: var(--retro-green);
+  filter: brightness(0.7);
+}
+
+.terminal-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+  color: var(--retro-black);
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  min-height: 150px;
+  color: var(--retro-green);
+  font-size: 20px;
+  text-align: left;
+}
+
+.terminal-body p {
+  margin: 0.5rem 0;
+  animation: typeIn 0.5s ease-out;
+}
+
+@keyframes typeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  animation: cursorBlink 1s infinite;
+}
+
+.terminal-cursor.hidden {
+  opacity: 0;
+}
+
+@keyframes cursorBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.action-buttons a {
+  text-decoration: none;
+}
+
+.action-buttons .pixel-icon {
+  font-size: 18px;
+  margin-right: 0.5rem;
+}
+
+/* Insert Coin Section */
+.insert-coin {
+  margin-top: 4rem;
+  position: relative;
+}
+
+.coin-text {
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  color: var(--retro-yellow);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  animation: coinTextPulse 2s ease-in-out infinite;
+}
+
+.coin-text.hidden {
+  opacity: 0;
+}
+
+@keyframes coinTextPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.coin-slot {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background-color: var(--retro-black);
+  border: 4px solid var(--retro-white);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.coin {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: var(--retro-yellow);
+  border: 2px solid var(--retro-orange);
+  border-radius: 50%;
+  animation: coinFloat 3s ease-in-out infinite;
+  box-shadow: inset -3px -3px 6px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(255, 217, 61, 0.5);
+}
+
+.coin::after {
+  content: "$";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  color: var(--retro-orange);
+}
+
+@keyframes coinFloat {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(180deg);
+  }
+}
+
+/* Responsive for 404 Page */
+@media (max-width: 768px) {
+  .game-text {
+    font-size: 32px;
+  }
+
+  .over-text {
+    font-size: 40px;
+  }
+
+  .score-value {
+    font-size: 28px;
+  }
+
+  .retro-terminal {
+    margin: 0 1rem 2rem;
+  }
+
+  .terminal-body {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .coin-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-text {
+    font-size: 24px;
+  }
+
+  .over-text {
+    font-size: 32px;
+  }
+
+  .score-value {
+    font-size: 20px;
+  }
+
+  .pixel-skull {
+    transform: scale(0.8);
+  }
+
+  .error-code {
+    font-size: 18px;
+  }
+
+  .error-message p {
+    font-size: 16px;
+  }
+}

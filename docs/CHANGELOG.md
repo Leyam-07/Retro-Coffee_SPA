@@ -2,8 +2,46 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1/0/0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.4] - 2025-10-16
+
+### Added
+
+- **Enhanced 404 Error Page**:
+
+  - Complete redesign with retro game-over theme
+  - Pixel art skull with animated glowing red eyes
+  - Animated "GAME OVER" title with pulse and shake effects
+  - Dynamic score counter that animates from 0 to 404
+  - Retro terminal interface with typing animation displaying error messages
+  - Floating particle background animation system
+  - Interactive "INSERT COIN TO CONTINUE" section with floating coin animation
+  - Action buttons for easy navigation back to Home or Menu pages
+  - Full responsive design for mobile devices
+
+- **Page Transition System Setup**:
+  - Installed react-transition-group package for smooth page transitions
+  - Foundation laid for implementing retro-style page animations
+
+### Enhanced
+
+- **CSS Animations and Effects**:
+  - Added particle fall animation for background elements
+  - Created eye glow effect for pixel art skull
+  - Implemented title pulse and shake animations
+  - Added terminal cursor blink effect
+  - Created coin float animation with rotation
+  - Enhanced responsive breakpoints for 404 page elements
+
+### Technical Improvements
+
+- Advanced CSS animation techniques for game-over effects
+- State management for blinking text and animated counters
+- Particle system implementation using React hooks
+- Optimized animation performance with CSS transforms
+- Semantic component structure for the error page
 
 ## [1.0.3] - 2025-10-16
 
