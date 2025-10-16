@@ -3131,3 +3131,123 @@ p {
     font-size: 16px;
   }
 }
+
+/* Page Transitions */
+.transition-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.page-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+/* Subtle fade transition with minimal movement */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+  position: absolute;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
+
+/* Even more subtle for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    opacity: 0;
+    transform: none;
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: opacity 250ms ease-out;
+  }
+
+  .page-exit {
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transform: none;
+    transition: opacity 250ms ease-in;
+  }
+}
+
+/* Optional: Subtle retro scanline effect - only on hover */
+.page-wrapper {
+  position: relative;
+}
+
+.page-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show scanlines subtly during transition */
+.page-enter-active .page-wrapper::after,
+.page-exit-active .page-wrapper::after {
+  opacity: 1;
+}
+
+/* Ensure proper stacking during transitions */
+.main-content {
+  position: relative;
+  min-height: calc(100vh - 120px); /* Adjust based on header height */
+  overflow-x: hidden;
+}
+
+/* Removed flicker effect for subtlety */
+
+/* Responsive transition adjustments */
+@media (max-width: 768px) {
+  .page-enter {
+    transform: translateY(5px);
+  }
+
+  .page-exit-active {
+    transform: translateY(-5px);
+  }
+
+  .page-enter-active,
+  .page-exit-active {
+    transition-duration: 150ms;
+  }
+}

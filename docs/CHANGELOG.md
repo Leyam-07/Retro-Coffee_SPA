@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 2025-10-16
+
+### Added
+
+- **Page Transition System Implementation**:
+  - Smooth page transitions using react-transition-group
+  - Subtle fade animations with minimal vertical movement (10px)
+  - Fast transition duration (200ms) for snappy navigation
+  - Mobile-optimized transitions (150ms on smaller screens)
+  - Subtle retro scanline effect during transitions
+  - SwitchTransition implementation for better performance
+
+### Fixed
+
+- **React 18 Compatibility**:
+  - Resolved findDOMNode deprecation errors
+  - Implemented proper nodeRef usage with CSSTransition
+  - Switched from TransitionGroup to SwitchTransition for stability
+  - Ensured smooth transitions without console errors
+
+### Enhanced
+
+- **Transition Animations**:
+  - Removed aggressive visual effects (blur, flicker) for subtlety
+  - Reduced motion for accessibility preferences
+  - Consistent transition timing across all page routes
+  - Proper stacking context management during transitions
+  - Responsive adjustments for mobile devices
+
+### Technical Improvements
+
+- Modern React patterns with useRef for DOM references
+- Optimized CSS transition performance
+- Reduced animation complexity for better UX
+- Proper cleanup of transition states
+- Mobile-first transition design
+
 ## [1.0.4] - 2025-10-16
 
 ### Added
