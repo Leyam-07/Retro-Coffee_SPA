@@ -7,7 +7,12 @@ const Header = () => {
       <div className="container">
         <nav className="navbar">
           <Link to="/" className="brand">
-            <h1 className="pixel-text">RETRO CAFE</h1>
+            <div className="logo-container">
+              <div className="pixel-logo">
+                <div className="coffee-cup"></div>
+              </div>
+              <h1 className="pixel-text">RETRO CAFE</h1>
+            </div>
           </Link>
           <div className="nav-links">
             <Link to="/" className="nav-link">
