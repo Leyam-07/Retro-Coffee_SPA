@@ -1,0 +1,302 @@
+/* Import retro-style fonts */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+/* Root variables for retro color palette */
+:root {
+  --retro-black: #000000;
+  --retro-white: #ffffff;
+  --retro-red: #e53935;
+  --retro-pink: #ff6b9d;
+  --retro-yellow: #ffd93d;
+  --retro-green: #6bcf7f;
+  --retro-blue: #4fc3f7;
+  --retro-purple: #9575cd;
+  --retro-orange: #ff8a65;
+  --retro-brown: #8d6e63;
+  --retro-bg: #2a2a2a;
+  --retro-bg-light: #3a3a3a;
+  --pixel-border: 4px;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "VT323", monospace;
+  background-color: var(--retro-bg);
+  color: var(--retro-white);
+  font-size: 20px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.retro-header {
+  background-color: var(--retro-bg-light);
+  border-bottom: var(--pixel-border) solid var(--retro-white);
+  padding: 1rem 0;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--retro-yellow);
+}
+
+.brand:hover {
+  color: var(--retro-yellow);
+  text-decoration: none;
+}
+
+.pixel-text {
+  font-family: "Press Start 2P", cursive;
+  font-size: 24px;
+  margin: 0;
+  text-shadow: 3px 3px 0px var(--retro-red);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: var(--retro-white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  transition: all 0.1s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--retro-yellow);
+  text-decoration: none;
+  border: 2px solid var(--retro-yellow);
+  background-color: rgba(255, 217, 61, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  container-type: inline-size;
+}
+
+/* Page containers */
+[class^="page-"] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--retro-bg-light);
+  border: var(--pixel-border) solid var(--retro-white);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+[class^="page-"]::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, var(--retro-white) 2px, transparent 2px),
+    linear-gradient(to bottom, var(--retro-white) 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--retro-yellow);
+  text-shadow: 4px 4px 0px var(--retro-red);
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 20px;
+  color: var(--retro-green);
+  text-shadow: 3px 3px 0px var(--retro-blue);
+}
+
+h3 {
+  font-size: 16px;
+  color: var(--retro-pink);
+  text-shadow: 2px 2px 0px var(--retro-purple);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 404 Page */
+.page-not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.page-not-found h1 {
+  font-size: 36px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .pixel-text {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 10px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  [class^="page-"] {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Pixel button style */
+.pixel-button {
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  padding: 12px 24px;
+  background-color: var(--retro-green);
+  color: var(--retro-black);
+  border: none;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 0 0 #4a9c5d, 0 8px 0 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.1s;
+}
+
+.pixel-button:hover {
+  background-color: #7fdd90;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 #4a9c5d, 0 10px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.pixel-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #4a9c5d, 0 2px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Loading animation */
+.retro-loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.retro-loader::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--retro-yellow);
+  animation: loader 1s infinite;
+}
+
+@keyframes loader {
+  0% {
+    top: 0;
+    left: 0;
+    box-shadow: 16px 0 var(--retro-green), 32px 0 var(--retro-blue);
+  }
+  33% {
+    top: 0;
+    left: 16px;
+    box-shadow: -16px 0 var(--retro-yellow), 16px 0 var(--retro-blue);
+  }
+  66% {
+    top: 0;
+    left: 32px;
+    box-shadow: -16px 0 var(--retro-green), -32px 0 var(--retro-yellow);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    box-shadow: 16px 0 var(--retro-green), 32px 0 var(--retro-blue);
+  }
+}
