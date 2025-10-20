@@ -5,6 +5,7 @@
 :root {
   --retro-black: #000000;
   --retro-white: #ffffff;
+  --retro-text-secondary: #cccccc; /* For secondary text */
   --retro-red: #e53935;
   --retro-pink: #ff6b9d;
   --retro-yellow: #ffd93d;
@@ -16,6 +17,7 @@
   --retro-bg: #2a2a2a;
   --retro-bg-light: #3a3a3a;
   --pixel-border: 4px;
+  --bs-heading-color: #cccccc;
 }
 
 /* Global styles */
@@ -23,7 +25,7 @@
   box-sizing: border-box;
 }
 
-body {
+html body {
   margin: 0;
   font-family: "VT323", monospace;
   background-color: var(--retro-bg);
@@ -234,6 +236,24 @@ small,
 .description,
 .subtitle {
   color: var(--retro-white) !important;
+}
+
+/* Override for secondary, supporting, or smaller text */
+.about-intro,
+.member-bio,
+.timeline-content p,
+.value-card p,
+.item-description,
+.info-card p,
+.cta-section p,
+.menu-item-description,
+.special-item p,
+.product-description,
+.shop-info p,
+.achievement-description,
+.reward-description,
+.step-card p {
+  color: var(--retro-text-secondary) !important;
 }
 
 p {
@@ -977,6 +997,11 @@ p {
 .value-card {
   padding: 2rem 1rem;
   text-align: center;
+}
+
+.value-card h3 {
+  min-height: 48px; /* Aligns titles for visual consistency */
+  overflow-wrap: break-word; /* Prevents long words from overflowing */
 }
 
 /* Pixel Icons */
