@@ -40,6 +40,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--retro-bg);
 }
 
 /* Header styles */
@@ -144,7 +145,7 @@ body {
 .nav-link {
   font-family: "Press Start 2P", cursive;
   font-size: 12px;
-  color: var(--retro-white);
+  color: var(--retro-white) !important;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border: 2px solid transparent;
@@ -224,6 +225,15 @@ h3 {
   font-size: 16px;
   color: var(--retro-pink);
   text-shadow: 2px 2px 0px var(--retro-purple);
+}
+
+p,
+span:not(.hero-line1):not(.hero-line2),
+small,
+.info-text,
+.description,
+.subtitle {
+  color: var(--retro-white) !important;
 }
 
 p {
@@ -315,7 +325,7 @@ p {
   font-size: 14px;
   padding: 12px 24px;
   background-color: var(--retro-green);
-  color: var(--retro-black);
+  color: var(--retro-white);
   border: none;
   position: relative;
   cursor: pointer;
@@ -655,8 +665,6 @@ p {
 /* Featured Section */
 .featured-section {
   padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .section-title {
@@ -717,8 +725,6 @@ p {
 .cta-section {
   padding: 4rem 2rem;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .cta-section h2 {
@@ -1391,7 +1397,7 @@ p {
 
 .category-tab.active {
   background-color: var(--retro-yellow);
-  color: var(--retro-black);
+  color: var(--retro-white);
   border-color: var(--retro-yellow);
   box-shadow: 0 4px 0 #ccae31, 0 8px 0 rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
@@ -1860,7 +1866,7 @@ p {
 
 .quantity-btn:hover {
   background-color: var(--retro-yellow);
-  color: var(--retro-black);
+  color: var(--retro-white);
 }
 
 .quantity-btn:active {
@@ -2931,7 +2937,7 @@ p {
 .terminal-title {
   font-family: "Press Start 2P", cursive;
   font-size: 10px;
-  color: var(--retro-black);
+  color: var(--retro-white);
   margin-left: auto;
 }
 

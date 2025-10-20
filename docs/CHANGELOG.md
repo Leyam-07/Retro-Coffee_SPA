@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6] - 2025-10-20
+
+### Fixed
+
+- **Text Contrast and Visibility**:
+  - Implemented global white color rule for all supporting and info text elements
+  - Preserved original hero title colors ("Welcome To" in retro green, "Retro Cafe" in retro yellow)
+  - Ensured navigation headers (HOME, ABOUT, MENU, SHOP, REWARDS) remain white
+  - Added `!important` declarations to override conflicting styles
+  - Improved accessibility and readability across all pages and components
+
+### Enhanced
+
+- **Typography Hierarchy**:
+  - Strengthened text color inheritance system
+  - Maintained retro color scheme while improving contrast
+  - Targeted CSS selectors for specific text elements (paragraphs, spans, small text, info elements)
+
+### Technical Improvements
+
+- CSS specificity management with strategic `!important` usage
+- Consistent color application across component hierarchy
+- Preserved design integrity while fixing contrast issues
+
 ## [1.0.5] - 2025-10-16
 
 ### Added
