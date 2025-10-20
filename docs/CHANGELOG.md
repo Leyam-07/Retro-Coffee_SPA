@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.7] - 2025-10-20
+
+### Fixed
+
+- **Cart Clipping**: Resolved an issue where the floating cart button and sidebar on the Shop page would get clipped during page transitions. The element is now independent of page transition animations.
+
+### Refactored
+
+- **Cart State Management**:
+  - Lifted cart state (`cart`, `showCart`) and all related logic (`addToCart`, `removeFromCart`, `updateQuantity`, etc.) from the `Shop` page component to the main `App` component.
+  - The `Shop` component now receives cart functionality via props, making it a presentational component regarding the cart.
+
+### Enhanced
+
+- **Application Architecture**:
+  - Centralized the cart UI and logic in `App.js` to ensure it persists correctly across the application and is not affected by page-specific transitions.
+  - The cart is now conditionally rendered based on the route, appearing only on the `/shop` page.
+
+### Technical Improvements
+
+- Decoupled the cart UI from the `SwitchTransition` component to prevent `transform`-related stacking context issues.
+- Increased `z-index` on cart elements to ensure they render above all other page content.
+- Simplified component imports by using the `index.js` barrel file in the `components` directory.
+
 ## [1.0.6] - 2025-10-20
 
 ### Fixed

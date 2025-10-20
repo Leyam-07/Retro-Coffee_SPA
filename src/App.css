@@ -589,7 +589,7 @@ p {
 .hero-line1 {
   font-size: 24px;
   color: var(--retro-green);
-  text-shadow: 3px 3px 0px var(--retro-blue);
+  text-shadow: 1px 1px 0px var(--retro-black), 3px 3px 0px var(--retro-blue);
   margin-bottom: 0.5rem;
   animation: slideInLeft 0.5s ease-out;
 }
@@ -1716,7 +1716,7 @@ p {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 1000;
+  z-index: 1050;
 }
 
 .cart-button {
@@ -1771,7 +1771,7 @@ p {
   width: 400px;
   background-color: var(--retro-bg-light);
   border-left: 4px solid var(--retro-white);
-  z-index: 1001;
+  z-index: 1051;
   transition: right 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
