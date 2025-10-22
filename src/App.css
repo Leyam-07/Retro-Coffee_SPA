@@ -190,7 +190,7 @@ html body {
   align-items: center;
   gap: 0.5rem;
   position: relative;
-  top: -5px;
+  top: -5.5px;
 }
 
 .nav-link.cart-status .cart-count {
