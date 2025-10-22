@@ -190,17 +190,19 @@ html body {
   align-items: center;
   gap: 0.5rem;
   position: relative;
+  top: -5px;
 }
 
 .nav-link.cart-status .cart-count {
   background-color: var(--retro-red);
   color: var(--retro-white);
   font-family: "Press Start 2P", cursive;
-  font-size: 10px;
+  font-size: 8px;
   padding: 2px 6px;
   border-radius: 10px;
   min-width: 20px;
   text-align: center;
+  top: -5px;
 }
 
 /* Hide cart label on desktop, show on mobile */
@@ -2204,7 +2206,7 @@ p {
 }
 
 .cart-icon {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .cart-count {
