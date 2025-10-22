@@ -1,7 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const Header = () => {
+  const { getTotalItems, setShowCart } = useCart();
+  const totalItems = getTotalItems();
+
+  const handleCartClick = (e) => {
+    e.preventDefault();
+    setShowCart(true);
+  };
+
   return (
     <header className="retro-header">
       <div className="container">
@@ -30,6 +39,14 @@ const Header = () => {
             <Link to="/rewards" className="nav-link">
               REWARDS
             </Link>
+            <a
+              href="#"
+              onClick={handleCartClick}
+              className="nav-link cart-status"
+            >
+              <span className="cart-icon">🛒</span>
+              <span className="cart-count">{totalItems}</span>
+            </a>
           </div>
         </nav>
       </div>

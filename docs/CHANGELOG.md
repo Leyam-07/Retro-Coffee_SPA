@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-10-22
+
+### Added
+
+- **Global Cart Context**: Implemented a new `CartContext` using React's Context API to manage a shared cart state across the entire application, centralizing all cart-related logic.
+
+### Changed
+
+- **Shared Cart Functionality**: The `Menu` and `Shop` pages now share a single, interchangeable cart. Items from both pages can be added and managed together seamlessly.
+- **Global Cart Visibility**: The floating cart button and sidebar are now visible on all pages, not just the Menu and Shop, providing a consistent and accessible user experience.
+
+### Enhanced
+
+- **Application Architecture**: Refactored the application to use a centralized context for state management, decoupling components and improving scalability.
+- **Header Navigation**: The main header now displays the total number of items in the cart in real-time and provides a one-click action to open the cart sidebar from any page.
+
 ## [1.0.9] - 2025-10-22
 
 ### Changed

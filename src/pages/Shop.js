@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Card, PixelBorder, Button } from "../components";
+import { useCart } from "../context/CartContext";
 
-const Shop = ({ addToCart }) => {
+const Shop = () => {
+  const { addToCart } = useCart();
   const [activeCategory, setActiveCategory] = useState("coffee");
 
   const categories = [

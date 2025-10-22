@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Card, PixelBorder, Button } from "../components";
+import { useCart } from "../context/CartContext";
 
 const Menu = () => {
+  const { addToCart } = useCart();
   const [activeCategory, setActiveCategory] = useState("hot-drinks");
 
   const categories = [
@@ -200,7 +202,11 @@ const Menu = () => {
                     <p className="menu-item-description">{item.description}</p>
                     <div className="menu-item-footer">
                       <span className="menu-item-price">{item.price}</span>
-                      <Button variant="primary" className="btn-sm">
+                      <Button
+                        variant="primary"
+                        className="btn-sm"
+                        onClick={() => addToCart(item)}
+                      >
                         Order
                       </Button>
                     </div>

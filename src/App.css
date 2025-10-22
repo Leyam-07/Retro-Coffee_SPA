@@ -1828,7 +1828,7 @@ p {
 .cart-sidebar {
   position: fixed;
   right: -400px;
-  top: 0;
+  top: 92px; /* Adjusted to be below the header */
   bottom: 0;
   width: 400px;
   background-color: var(--retro-bg-light);
@@ -2185,6 +2185,7 @@ p {
   .cart-sidebar {
     width: 100%;
     right: -100%;
+    top: 180px; /* Adjusted for taller mobile header */
   }
 
   .products-grid {
