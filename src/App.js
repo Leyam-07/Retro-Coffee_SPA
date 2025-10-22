@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -150,6 +151,7 @@ const AppWrapper = () => (
   <Router>
     <CartProvider>
       <App />
+      <Analytics />
     </CartProvider>
   </Router>
 );
