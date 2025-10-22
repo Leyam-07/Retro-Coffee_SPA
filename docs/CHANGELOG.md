@@ -5,6 +5,54 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2025-10-22
+
+### Added
+
+- **Mobile Hamburger Menu**:
+  - Implemented responsive hamburger menu for mobile navigation
+  - Added slide-in animation from right side with overlay
+  - Included "Cart" label next to cart icon in mobile menu for better clarity
+  - Toggle functionality with proper state management
+
+### Fixed
+
+- **Mobile Responsiveness Issues**:
+  - Resolved cramped navigation and hard-to-use interface on mobile devices
+  - Fixed layouts that used fixed sizes and didn't adapt to smaller screens
+  - Corrected components that didn't properly stack on mobile
+  - Addressed cart sidebar positioning issues on mobile
+
+### Enhanced
+
+- **Comprehensive Mobile CSS Improvements**:
+
+  - **Navigation**: Hamburger menu appears at 768px breakpoint with touch-friendly targets
+  - **Responsive Grids**: All grid layouts now stack to single column on mobile
+  - **Typography Scaling**: Reduced font sizes appropriately (h1: 24px, h2: 18px, h3: 14px)
+  - **Component Adaptations**:
+    - Cart sidebar: Full width on mobile with proper positioning
+    - Hero sections: Hidden decorative animations to save space
+    - Cards/borders: Reduced padding and border widths
+    - Buttons: Responsive sizing with smaller text on mobile
+  - **Breakpoints**: Added 768px for tablet/mobile and 480px for small devices
+  - **Touch Optimization**: Increased tap target sizes for better usability
+
+- **HTML Meta Tags**:
+  - Improved viewport meta tag with maximum-scale and user-scalable settings
+  - Updated theme-color to match retro theme (#3b5268)
+  - Added proper SEO description for the site
+  - Added Apple mobile web app capabilities
+  - Disabled telephone number auto-detection formatting
+
+### Technical Improvements
+
+- Mobile-first approach with progressive enhancement
+- CSS Grid with auto-fit/minmax for responsive layouts
+- Performance optimizations by hiding decorative elements on mobile
+- Maintained retro 8-bit aesthetic while improving mobile usability
+- Consistent padding and spacing adjustments across all components
+
 ## [1.1.1] - 2025-10-22
 
 ### Added

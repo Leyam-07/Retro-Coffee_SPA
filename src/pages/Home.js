@@ -9,7 +9,7 @@ const Home = () => {
     {
       id: 1,
       title: "8-BIT ESPRESSO",
-      description: "A shot of pixelated perfection",
+      description: "Double shot of pixelated perfection",
       price: "₱150",
     },
     {
