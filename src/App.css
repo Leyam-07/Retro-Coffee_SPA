@@ -176,8 +176,6 @@ html body {
 
 /* Page containers */
 [class^="page-"] {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 2rem;
   background-color: var(--retro-bg-light);
   border: var(--pixel-border) solid var(--retro-white);
