@@ -3775,3 +3775,11 @@ p {
     transition-duration: 150ms;
   }
 }
+
+/* Override Bootstrap h3 font-size */
+@media (min-width: 1200px) {
+  .h3,
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
