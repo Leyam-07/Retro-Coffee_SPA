@@ -7,24 +7,24 @@ const About = () => {
 
   const timelineEvents = [
     {
-      year: "2020",
+      year: "2022",
       title: "GAME START",
       description:
         "Retro Cafe was born from a love of coffee and classic gaming",
     },
     {
-      year: "2021",
+      year: "2023",
       title: "LEVEL UP",
       description:
         "Expanded menu with specialty drinks and retro-themed treats",
     },
     {
-      year: "2022",
+      year: "2024",
       title: "NEW ACHIEVEMENT",
       description: "Launched rewards program and mobile ordering",
     },
     {
-      year: "2023",
+      year: "2025",
       title: "POWER-UP",
       description: "Opened second location and started roasting our own beans",
     },
@@ -32,19 +32,19 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "ALEX CHEN",
-      role: "HEAD BARISTA",
-      bio: "Coffee wizard with 10+ years experience",
+      name: "ALVIN",
+      role: "LEAD BARISTA",
+      bio: "Energetic and passionate about crafting the perfect espresso",
     },
     {
-      name: "MAYA PATEL",
+      name: "SIMON",
       role: "ROAST MASTER",
-      bio: "Perfecting the art of pixel-perfect roasts",
+      bio: "The genius behind our scientifically perfect coffee blends",
     },
     {
-      name: "JAKE WILLIAMS",
-      role: "CAFE MANAGER",
-      bio: "Keeping the cafe running at 60 FPS",
+      name: "THEODORE",
+      role: "PASTRY CHEF",
+      bio: "Sweet treats and warm hugs with every baked good",
     },
   ];
 

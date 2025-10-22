@@ -654,7 +654,7 @@ p {
 
 .coffee-steam {
   position: absolute;
-  top: -30px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1099,67 +1099,124 @@ p {
   position: relative;
 }
 
-/* Different avatar styles */
+/* Different avatar styles - Chipmunk themed */
+/* Alvin - Red theme, energetic */
 .avatar-1 {
   background:
-    /* Hair */ linear-gradient(
-        var(--retro-black) 0,
-        var(--retro-black)
+    /* Ears */ linear-gradient(
+        var(--retro-brown) 0,
+        var(--retro-brown)
       )
-      20px 10px / 80px 20px,
-    /* Face */ linear-gradient(#fdbcb4 0, #fdbcb4) 20px 30px / 80px 60px,
-    /* Eyes */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 35px
-      40px / 10px 10px,
-    linear-gradient(var(--retro-black) 0, var(--retro-black)) 75px 40px / 10px
-      10px,
+      20px 5px / 20px 15px,
+    linear-gradient(var(--retro-brown) 0, var(--retro-brown)) 80px 5px / 20px
+      15px,
+    /* Face/Head */ linear-gradient(#d4a574 0, #d4a574) 15px 15px / 90px 70px,
+    /* Eyes */ linear-gradient(var(--retro-white) 0, var(--retro-white)) 30px
+      35px / 25px 20px,
+    linear-gradient(var(--retro-white) 0, var(--retro-white)) 65px 35px / 25px
+      20px,
+    /* Pupils */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 37px
+      40px / 12px 12px,
+    linear-gradient(var(--retro-black) 0, var(--retro-black)) 72px 40px / 12px
+      12px,
+    /* Nose */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 55px
+      50px / 10px 8px,
+    /* Front teeth */ linear-gradient(var(--retro-white) 0, var(--retro-white))
+      48px 65px / 8px 12px,
+    linear-gradient(var(--retro-white) 0, var(--retro-white)) 64px 65px / 8px
+      12px,
     /* Mouth */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 45px
-      65px / 30px 5px,
-    /* Body */ linear-gradient(var(--retro-green) 0, var(--retro-green)) 10px
-      90px / 100px 30px;
+      60px / 30px 3px,
+    /* Body - Red shirt */ linear-gradient(var(--retro-red) 0, var(--retro-red))
+      10px 85px / 100px 35px,
+    /* Cap/Hat */ linear-gradient(var(--retro-red) 0, var(--retro-red)) 25px 0 /
+      70px 20px,
+    /* "A" on cap */ linear-gradient(var(--retro-yellow) 0, var(--retro-yellow))
+      55px 5px / 10px 10px;
   background-repeat: no-repeat;
 }
 
+/* Simon - Blue theme with glasses */
 .avatar-2 {
   background:
-    /* Hair */ linear-gradient(
-        var(--retro-purple) 0,
-        var(--retro-purple)
+    /* Ears */ linear-gradient(
+        var(--retro-brown) 0,
+        var(--retro-brown)
       )
-      15px 5px / 90px 30px,
-    /* Face */ linear-gradient(#8d6e63 0, #8d6e63) 20px 30px / 80px 60px,
-    /* Eyes */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 35px
-      40px / 10px 10px,
-    linear-gradient(var(--retro-black) 0, var(--retro-black)) 75px 40px / 10px
-      10px,
-    /* Glasses */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 30px
-      38px / 20px 15px,
-    linear-gradient(var(--retro-black) 0, var(--retro-black)) 70px 38px / 20px
+      20px 5px / 20px 15px,
+    linear-gradient(var(--retro-brown) 0, var(--retro-brown)) 80px 5px / 20px
       15px,
-    linear-gradient(var(--retro-black) 0, var(--retro-black)) 50px 42px / 20px
-      2px,
+    /* Face/Head */ linear-gradient(#d4a574 0, #d4a574) 15px 15px / 90px 70px,
+    /* Glasses frame */
+      linear-gradient(var(--retro-black) 0, var(--retro-black)) 25px 33px / 30px
+      24px,
+    linear-gradient(var(--retro-black) 0, var(--retro-black)) 65px 33px / 30px
+      24px,
+    linear-gradient(var(--retro-black) 0, var(--retro-black)) 55px 42px / 10px
+      3px,
+    /* Glasses lenses */
+      linear-gradient(rgba(79, 195, 247, 0.3) 0, rgba(79, 195, 247, 0.3)) 28px
+      36px / 24px 18px,
+    linear-gradient(rgba(79, 195, 247, 0.3) 0, rgba(79, 195, 247, 0.3)) 68px
+      36px / 24px 18px,
+    /* Eyes behind glasses */
+      linear-gradient(var(--retro-black) 0, var(--retro-black)) 35px 41px / 10px
+      8px,
+    linear-gradient(var(--retro-black) 0, var(--retro-black)) 75px 41px / 10px
+      8px,
+    /* Nose */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 55px
+      50px / 10px 8px,
+    /* Front teeth */ linear-gradient(var(--retro-white) 0, var(--retro-white))
+      48px 65px / 8px 12px,
+    linear-gradient(var(--retro-white) 0, var(--retro-white)) 64px 65px / 8px
+      12px,
     /* Mouth */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 45px
-      65px / 30px 5px,
-    /* Body */ linear-gradient(var(--retro-blue) 0, var(--retro-blue)) 10px 90px /
-      100px 30px;
+      60px / 30px 3px,
+    /* Body - Blue shirt */
+      linear-gradient(var(--retro-blue) 0, var(--retro-blue)) 10px 85px / 100px
+      35px;
   background-repeat: no-repeat;
 }
 
+/* Theodore - Green theme, softer appearance */
 .avatar-3 {
   background:
-    /* Hair */ linear-gradient(
-        var(--retro-orange) 0,
-        var(--retro-orange)
+    /* Ears */ linear-gradient(
+        var(--retro-brown) 0,
+        var(--retro-brown)
       )
-      20px 10px / 80px 25px,
-    /* Face */ linear-gradient(#fdbcb4 0, #fdbcb4) 20px 30px / 80px 60px,
-    /* Eyes */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 35px
-      40px / 10px 10px,
-    linear-gradient(var(--retro-black) 0, var(--retro-black)) 75px 40px / 10px
-      10px,
-    /* Beard */ linear-gradient(var(--retro-brown) 0, var(--retro-brown)) 30px
-      60px / 60px 20px,
-    /* Body */ linear-gradient(var(--retro-red) 0, var(--retro-red)) 10px 90px /
-      100px 30px;
+      18px 8px / 24px 18px,
+    linear-gradient(var(--retro-brown) 0, var(--retro-brown)) 78px 8px / 24px
+      18px,
+    /* Face/Head - slightly rounder */ linear-gradient(#d4a574 0, #d4a574) 10px
+      18px / 100px 72px,
+    /* Eyes - bigger, cuter */
+      linear-gradient(var(--retro-white) 0, var(--retro-white)) 28px 35px / 28px
+      24px,
+    linear-gradient(var(--retro-white) 0, var(--retro-white)) 64px 35px / 28px
+      24px,
+    /* Pupils - bigger */
+      linear-gradient(var(--retro-black) 0, var(--retro-black)) 36px 42px / 14px
+      14px,
+    linear-gradient(var(--retro-black) 0, var(--retro-black)) 72px 42px / 14px
+      14px,
+    /* Nose */ linear-gradient(var(--retro-black) 0, var(--retro-black)) 55px
+      52px / 10px 8px,
+    /* Front teeth */ linear-gradient(var(--retro-white) 0, var(--retro-white))
+      48px 67px / 8px 12px,
+    linear-gradient(var(--retro-white) 0, var(--retro-white)) 64px 67px / 8px
+      12px,
+    /* Mouth - friendly smile */
+      linear-gradient(var(--retro-black) 0, var(--retro-black)) 43px 62px / 34px
+      3px,
+    /* Body - Green shirt */
+      linear-gradient(var(--retro-green) 0, var(--retro-green)) 10px 90px /
+      100px 30px,
+    /* Cheeks - rosy */
+      linear-gradient(rgba(255, 182, 193, 0.4) 0, rgba(255, 182, 193, 0.4)) 15px
+      50px / 20px 15px,
+    linear-gradient(rgba(255, 182, 193, 0.4) 0, rgba(255, 182, 193, 0.4)) 85px
+      50px / 20px 15px;
   background-repeat: no-repeat;
 }
 
