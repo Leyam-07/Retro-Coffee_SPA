@@ -358,8 +358,12 @@ p {
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   /* Header Mobile Styles */
+  .retro-header {
+    padding: 0.5rem 0;
+  }
+
   .navbar {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
   }
 
   .logo-container {
