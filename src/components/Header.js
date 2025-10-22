@@ -67,9 +67,9 @@ const Header = () => {
               onClick={handleCartClick}
               className="nav-link cart-status"
             >
+              <span className="cart-label">CART</span>
               <span className="cart-icon">🛒</span>
               <span className="cart-count">{totalItems}</span>
-              <span className="cart-label">Cart</span>
             </a>
           </div>
 
