@@ -225,7 +225,7 @@ const Rewards = () => {
               <div className="step-card">
                 <div className="step-number">1</div>
                 <h3>Earn Points</h3>
-                <p>Get 1 point for every $1 spent</p>
+                <p>Get 1 point for every ₱1 spent</p>
               </div>
             </PixelBorder>
             <PixelBorder color="blue">

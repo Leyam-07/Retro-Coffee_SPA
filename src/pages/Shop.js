@@ -16,7 +16,7 @@ const Shop = ({ addToCart }) => {
         id: "c1",
         name: "8-Bit Blend",
         description: "Medium roast with pixelated flavor notes",
-        price: 18.99,
+        price: 380,
         image: "🟫",
         badge: "BEST SELLER",
       },
@@ -24,21 +24,21 @@ const Shop = ({ addToCart }) => {
         id: "c2",
         name: "Game Over Dark Roast",
         description: "Extra bold coffee for serious gamers",
-        price: 19.99,
+        price: 420,
         image: "⬛",
       },
       {
         id: "c3",
         name: "Level Up Light Roast",
         description: "Bright and energetic morning starter",
-        price: 17.99,
+        price: 360,
         image: "🟨",
       },
       {
         id: "c4",
         name: "Retro Espresso",
         description: "Classic Italian style, 8-bit approved",
-        price: 21.99,
+        price: 480,
         image: "🟤",
         badge: "PREMIUM",
       },
@@ -46,14 +46,14 @@ const Shop = ({ addToCart }) => {
         id: "c5",
         name: "Pixel Decaf",
         description: "All the flavor, none of the jitters",
-        price: 16.99,
+        price: 320,
         image: "🟩",
       },
       {
         id: "c6",
         name: "Arcade Blend Sampler",
         description: "Try all our signature roasts",
-        price: 49.99,
+        price: 850,
         image: "🎁",
         badge: "VALUE PACK",
       },
@@ -63,7 +63,7 @@ const Shop = ({ addToCart }) => {
         id: "m1",
         name: "Retro Cafe T-Shirt",
         description: "Classic pixel art logo tee",
-        price: 24.99,
+        price: 350,
         image: "👕",
         badge: "NEW",
       },
@@ -71,35 +71,35 @@ const Shop = ({ addToCart }) => {
         id: "m2",
         name: "8-Bit Mug",
         description: "Color-changing pixel art mug",
-        price: 15.99,
+        price: 220,
         image: "☕",
       },
       {
         id: "m3",
         name: "Pixel Hoodie",
         description: "Cozy hoodie with retro graphics",
-        price: 45.99,
+        price: 450,
         image: "🧥",
       },
       {
         id: "m4",
         name: "Retro Cap",
         description: "Snapback with embroidered logo",
-        price: 22.99,
+        price: 280,
         image: "🧢",
       },
       {
         id: "m5",
         name: "Arcade Tote Bag",
         description: "Canvas bag for coffee runs",
-        price: 18.99,
+        price: 250,
         image: "👜",
       },
       {
         id: "m6",
         name: "Pixel Pin Set",
         description: "Collectible enamel pins",
-        price: 12.99,
+        price: 180,
         image: "📌",
         badge: "LIMITED",
       },
@@ -109,42 +109,42 @@ const Shop = ({ addToCart }) => {
         id: "a1",
         name: "Coffee Grinder Pro",
         description: "Manual grinder with pixel grip",
-        price: 34.99,
+        price: 850,
         image: "⚙️",
       },
       {
         id: "a2",
         name: "8-Bit French Press",
         description: "Retro-styled brewing perfection",
-        price: 29.99,
+        price: 650,
         image: "🫖",
       },
       {
         id: "a3",
         name: "Pixel Pour Over",
         description: "Precision brewing kit",
-        price: 26.99,
+        price: 550,
         image: "🔽",
       },
       {
         id: "a4",
         name: "Retro Timer",
         description: "8-bit countdown for perfect brew",
-        price: 19.99,
+        price: 350,
         image: "⏱️",
       },
       {
         id: "a5",
         name: "Game Coffee Scale",
         description: "Digital scale with retro display",
-        price: 39.99,
+        price: 950,
         image: "⚖️",
       },
       {
         id: "a6",
         name: "Arcade Thermos",
         description: "Keep coffee hot for hours",
-        price: 32.99,
+        price: 750,
         image: "🍶",
         badge: "HOT ITEM",
       },
@@ -198,7 +198,7 @@ const Shop = ({ addToCart }) => {
                     <h3 className="product-name">{product.name}</h3>
                     <p className="product-description">{product.description}</p>
                     <div className="product-footer">
-                      <span className="product-price">${product.price}</span>
+                      <span className="product-price">₱{product.price}</span>
                       <Button
                         variant="primary"
                         className="add-to-cart-btn"
@@ -223,7 +223,7 @@ const Shop = ({ addToCart }) => {
               <div className="info-item">
                 <span className="info-icon">📦</span>
                 <h3>Free Shipping</h3>
-                <p>On orders over $50</p>
+                <p>On orders over ₱1500</p>
               </div>
               <div className="info-item">
                 <span className="info-icon">🚚</span>

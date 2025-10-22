@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.8] - 2025-10-22
+
+### Changed
+
+- **Currency Localization to Philippine Peso**:
+
+  - Replaced all USD dollar signs ($) with Philippine peso symbols (₱) throughout the entire application
+  - Updated currency display in cart, menu items, shop products, rewards text, and 404 page animations
+  - Comprehensive currency conversion across 45+ locations in JS and CSS files
+
+- **Filipino Market Price Adjustment**:
+  - Increased all pricing from USD values to competitive Philippine market rates
+  - **Menu Items**: Adjusted to ₱120-₱340 range (drinks ₱120-220, food ₱200-340, desserts ₱120-165)
+  - **Shop Products**: Updated coffee beans ₱320-850, merchandise ₱180-450, accessories ₱350-950
+  - **Special Offers**: Scaled combo meal discount to ₱35, free shipping threshold to ₱1500
+  - Home page featured drinks positioned at ₱150-190
+
+### Enhanced
+
+- **Market Positioning for Philippines**:
+  - Repositioned pricing strategy for Filipino consumers with good value targeting
+  - Maintained premium positioning while ensuring competitive pricing
+  - Optimized price points to reflect local market expectations and purchasing power
+
+### Technical Improvements
+
+- Consistent currency symbol usage across all components and pages
+- Maintainable pricing structure with clear market research-based adjustments
+- Preserved retro theme while adapting to local market requirements
+
 ## [1.0.7] - 2025-10-20
 
 ### Fixed

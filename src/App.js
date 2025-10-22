@@ -135,7 +135,7 @@ function App() {
                           <span className="cart-item-icon">{item.image}</span>
                           <div>
                             <h4>{item.name}</h4>
-                            <p className="cart-item-price">${item.price}</p>
+                            <p className="cart-item-price">₱{item.price}</p>
                           </div>
                         </div>
                         <div className="cart-item-controls">
@@ -163,7 +163,7 @@ function App() {
                   <div className="cart-footer">
                     <div className="cart-total">
                       <span>Total:</span>
-                      <span className="total-price">${getTotalPrice()}</span>
+                      <span className="total-price">₱{getTotalPrice()}</span>
                     </div>
                     <Button variant="success" className="checkout-btn">
                       Checkout

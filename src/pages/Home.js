@@ -10,19 +10,19 @@ const Home = () => {
       id: 1,
       title: "8-BIT ESPRESSO",
       description: "Double shot of pixelated perfection",
-      price: "$4.99",
+      price: "₱150",
     },
     {
       id: 2,
       title: "RETRO LATTE",
       description: "Smooth, creamy, nostalgic",
-      price: "$5.99",
+      price: "₱190",
     },
     {
       id: 3,
       title: "GAME OVER COLD BREW",
       description: "Extra strong for extra lives",
-      price: "$4.49",
+      price: "₱170",
     },
   ];
 
