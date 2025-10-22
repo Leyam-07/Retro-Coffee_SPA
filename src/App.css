@@ -480,6 +480,10 @@ p {
     font-size: 16px;
   }
 
+  h3 {
+    font-size: 12px;
+  }
+
   .main-content {
     padding: 0.25rem;
   }
@@ -631,6 +635,21 @@ p {
   padding: 1rem;
   position: relative;
   background-color: var(--retro-bg-light);
+}
+
+/* Reduce pixel border padding on mobile */
+@media (max-width: 768px) {
+  .pixel-border {
+    padding: 0.75rem;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pixel-border {
+    padding: 0.5rem;
+    border-width: 2px;
+  }
 }
 
 .pixel-border-animate {
@@ -1186,6 +1205,7 @@ p {
   gap: 2rem;
   max-width: 1000px;
   margin: 3rem auto 0;
+  padding: 0 1rem;
 }
 
 .value-card {
@@ -1196,6 +1216,17 @@ p {
 .value-card h3 {
   min-height: 48px; /* Aligns titles for visual consistency */
   overflow-wrap: break-word; /* Prevents long words from overflowing */
+  word-break: break-word; /* Force word breaks if needed */
+  hyphens: auto; /* Allow hyphenation */
+  white-space: normal; /* Allow text wrapping */
+}
+
+/* Special handling for very small screens */
+@media (max-width: 360px) {
+  .value-card h3 {
+    font-size: 11px !important;
+    letter-spacing: -1px;
+  }
 }
 
 /* Pixel Icons */
@@ -1495,10 +1526,31 @@ p {
     padding: 2rem 1rem;
   }
 
-  .values-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
   .team-grid {
     grid-template-columns: 1fr;
     padding: 0 1rem;
+  }
+
+  .value-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .value-card h3 {
+    font-size: 14px;
+    min-height: auto;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+  }
+
+  .value-card p {
+    font-size: 18px;
+    padding: 0 0.5rem;
   }
 
   .team-section {
@@ -1544,6 +1596,29 @@ p {
 
   .value-card {
     padding: 1.5rem 0.5rem;
+  }
+
+  .value-card h3 {
+    font-size: 12px;
+    letter-spacing: 0;
+    word-spacing: -2px;
+    padding: 0 0.25rem;
+  }
+
+  .value-card p {
+    font-size: 16px;
+    padding: 0 0.25rem;
+  }
+
+  .values-grid {
+    gap: 1rem;
+  }
+
+  /* Pixel icons on mobile */
+  .value-card .pixel-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
   }
 
   .member-bio {
